@@ -2,10 +2,10 @@
 
 ## Descrição:
 Projeto com objetivo de simular um sistema de mercado onde haverá:
-  -Sistema de cadastro de fornecedores.
-  -Sistema de cadastro de produtos(Cada um pertencendo a um fornecedor).
-  -Relacionamento entre entidades.
-  -Conexão com banco de dados(Sql Server).      
+- Sistema de cadastro de fornecedores.
+- Sistema de cadastro de produtos(Cada um pertencendo a um fornecedor).
+- Relacionamento entre entidades.
+- Conexão com banco de dados(Sql Server).      
 
 ## Objetivos para projeto
   [x]Criação de tabelas no banco de dados
