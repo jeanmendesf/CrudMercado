@@ -1,5 +1,12 @@
 # CrudMercado
 
+## Recursos utilizados:
+- .Net Core MVC
+- .Net Core Api
+- Sql Server
+- HTML 5
+- CSS
+
 ## Descrição:
 Projeto com objetivo de simular um sistema de mercado onde haverá:
 - Sistema de cadastro de fornecedores.
