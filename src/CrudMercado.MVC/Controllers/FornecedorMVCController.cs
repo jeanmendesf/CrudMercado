@@ -15,6 +15,7 @@ namespace CrudMercado.MVC.Controllers
             _fornecedorBusiness = new FornecedorBusiness();
         }
 
+
         /*public async Task<IActionResult> Index()
         {
             IEnumerable<FornecedorEntity> fornecedores = null;
