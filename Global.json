@@ -1,0 +1,4 @@
+{
+  "projects": [ "0 - Presentation", "1 - Model", "2 - Business", "3 - Data" ],
+  "sdk": { "version": "3.1" }
+}

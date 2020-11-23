@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrudMercado.Data.DAL\CrudMercado.Data.DAL.csproj" />
+    <ProjectReference Include="..\CrudMercado.Model\CrudMercado.Model.csproj" />
+  </ItemGroup>
+
+</Project>
