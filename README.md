@@ -8,10 +8,10 @@ Projeto com objetivo de simular um sistema de mercado onde haverá:
 - Conexão com banco de dados(Sql Server).      
 
 ## Objetivos para projeto
--[x]Criação de tabelas no banco de dados
--[x]Models
--[x]Controllers
--[x]Criação de primeiras APIs
--[ ]Validação de dados recebidos
--[ ]Melhorar aparencia(front-end)
--[ ]Utilização de APIs
+- [x]Criação de tabelas no banco de dados
+- [x]Models
+- [x]Controllers
+- [x]Criação de primeiras APIs
+- [ ]Validação de dados recebidos
+- [ ]Melhorar aparencia(front-end)
+- [ ]Utilização de APIs
