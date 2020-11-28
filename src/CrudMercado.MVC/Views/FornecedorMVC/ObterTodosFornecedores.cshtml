@@ -1,49 +1,51 @@
 ﻿@model IEnumerable<CrudMercado.Model.Entities.FornecedorEntity>
+<!DOCTYPE html>
+<html>
+<head>
 
-@{
-    ViewBag.Title = "Lista de fornecedores";
-}
-<br />
+</head>
 
-<h2>Lista de fornecedores</h2>
-<p></p>
-<table class="table">
-    <thead>
-        <tr>           
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Produtos)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    @foreach (var item in Model)
-    {
+<body>
+    <h2 class="titulo">Lista de fornecedores</h2>
+    <p></p>
+    <table class="table" id="lista-fornecedores">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produtos)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "AtualizarFornecedor", new { id = item.Id }, new { @class = "btn-atualizar" })
+                    @Html.ActionLink("Deletar", "DeletarFornecedor", new { id = item.Id }, new { @class = "btn-deletar" })
+                </td>
+            </tr>
+        }
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Produtos)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "AtualizarFornecedor", new { id = item.Id }) |
-                @Html.ActionLink("Deletar", "DeletarFornecedor", new {id = item.Id });
-                @Html.ActionLink("TextoDoLink", "ActionName", "ControllerName");
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             </td>
         </tr>
-    }
-    <tr>
-        <td>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        </td>
-    </tr>
-</table>
+    </table>
+</body>
+</html>
