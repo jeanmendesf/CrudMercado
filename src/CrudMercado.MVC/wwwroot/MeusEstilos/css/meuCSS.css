@@ -19,9 +19,6 @@ h2.titulo {
     margin: 0px;
 }
 
-#img-background-barra-navegacao {
-}
-
 #itens-navegacao {
     text-align: center;
 }
@@ -45,54 +42,87 @@ h2.titulo {
             color: #eafaea;
         }
 
-.container {
-}
 
 
 
 /*----------Pagina de Lista de fornecedores----------*/
-#lista-fornecedores thead {
-    border-bottom: solid 3px;
-    margin-bottom: 10px;
-    color: #1e7b1e;
+
+#lista-fornecedores {
+    box-shadow: 0 0 2px 2px #1e7b1e;
 }
 
-#lista-fornecedores th {
-    font-size: 18px;
-    text-align: center;
-    border-right: #98e698 1px solid;
-    border-top: none;
-}
-
-#lista-fornecedores td {
-    font-size: 15px;
-    border-right: #98e698 1px solid;
-}
-
-    #lista-fornecedores td .btn-atualizar {
-        text-decoration: none;
-        border: 3px solid;
-        border-radius: 30px;
-        padding: 9px;
-        margin: 7px;
+    #lista-fornecedores thead {
+        border-bottom: solid 3px;
+        margin-bottom: 10px;
         color: #1e7b1e;
     }
 
-        #lista-fornecedores td .btn-atualizar:hover {
-            background-color: #d6f5d6;
-        }
-
-    #lista-fornecedores td .btn-deletar {
-        text-decoration: none;
-        border: #cc0000 3px solid;
-        border-radius: 30px;
-        padding: 9px;
-        margin: 7px;
-        background-color: #cc0000;
-        color: white;
+    #lista-fornecedores th {
+        font-size: 18px;
+        text-align: center;
+        border-right: #98e698 1px solid;
+        border-top: none;
     }
 
-        #lista-fornecedores td .btn-deletar:hover {
-            background-color: #800000;
-            border-color: #800000;
+    #lista-fornecedores td {
+        font-size: 15px;
+        border-right: #98e698 1px solid;
+        padding: 20px;
+    }
+
+        #lista-fornecedores td .btn-atualizar {
+            text-decoration: none;
+            border: 3px solid;
+            border-radius: 30px;
+            padding: 9px;
+            margin: 7px;
+            color: #1e7b1e;
         }
+
+            #lista-fornecedores td .btn-atualizar:hover {
+                background-color: #d6f5d6;
+            }
+
+.btn-deletar {
+    text-decoration: none;
+    border: #cc0000 3px solid;
+    border-radius: 30px;
+    padding: 9px;
+    margin: 7px;
+    background-color: #cc0000;
+    color: white;
+}
+
+    .btn-deletar:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #800000;
+        border-color: #800000;
+    }
+
+
+
+/*----------Pagina Deletar Fornecedor----------*/
+.btn-voltar {
+    text-decoration: none;
+    border: #4db8ff 3px solid;
+    color: #4db8ff;
+    border-radius: 30px;
+    padding: 9px;
+    margin: 7px;
+    background-color: #ccebff;
+}
+
+    .btn-voltar:hover {
+        text-decoration: none;
+        background-color: #b3e0ff;
+
+    }
+
+
+
+/*----------Pagina Deletar Fornecedor----------*/
+#formEditar {
+    box-shadow: 0 0 1px 1px #1e7b1e;
+    padding: 15px;
+}
