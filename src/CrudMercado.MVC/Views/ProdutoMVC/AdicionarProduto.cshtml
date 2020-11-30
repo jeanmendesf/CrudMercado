@@ -1,0 +1,45 @@
+﻿@model CrudMercado.Model.Entities.ProdutoEntity
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+
+<body>
+    <br />
+    <h2 class="titulo"> Adicionar Produto</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Adicionar" asp-controller="Produto" method="post" id="formAdicionar">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="col-md-8">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <input asp-for="Descricao" class="form-control" />
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <label asp-for="Preco" class="control-label"></label>
+                    <input asp-for="Preco" class="form-control" />
+                    <span asp-validation-for="Preco" class="text-danger"></span>
+                </div>
+
+                
+
+                <a asp-action="ObterTodosFornecedores" class="btn-voltar">Voltar</a>
+                <input type="submit" value="Adicionar" class="btn-adicionar" />
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

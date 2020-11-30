@@ -1,16 +1,16 @@
-﻿@model CrudMercado.Model.Entities.FornecedorEntity
+﻿@model CrudMercado.Model.Entities.ProdutoEntity
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Deletar Fornecedor</title>
+    <title>Deletar Produto</title>
 </head>
 
 
 <body>
     <h2 class="titulo">Deseja mesmo deletar?</h2>
     <hr />
-    <form asp-action="Deletar" asp-controller="Fornecedor" method="post" id="form-deletar">
+    <form asp-controller="ProdutoMVC" asp-action="DeletarProduto" method="post" id="form-deletar">
         <table class="table" id="lista-fornecedores">
             <thead>
                 <tr>
@@ -18,10 +18,10 @@
                         @Html.DisplayNameFor(model => model.Nome)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Cpf)
+                        @Html.DisplayNameFor(model => model.Descricao)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Produtos)
+                        @Html.DisplayNameFor(model => model.Preco)
                     </th>
                 </tr>
             </thead>
@@ -30,16 +30,15 @@
                     @Html.DisplayFor(model => Model.Nome)
                 </td>
                 <td>
-                    @Html.DisplayFor(model => Model.Cpf)
+                    @Html.DisplayFor(model => Model.Descricao)
                 </td>
                 <td>
-                    @Html.DisplayFor(model => Model.Produtos)
+                    @Html.DisplayFor(model => Model.Preco)
                 </td>
             </tr>
-
         </table>
 
-        <a asp-action="Obter" asp-controller="Fornecedor" class="btn-voltar">Voltar</a>
+        <a asp-action="Obter" asp-controller="Produto" class="btn-voltar">Voltar</a>
         <input type="hidden" asp-for="Id" />
         <input type="submit" class="btn-deletar" value="Deletar" />
     </form>

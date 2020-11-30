@@ -49,7 +49,7 @@ namespace CrudMercado.Model.Entities
                 ErrosProdutos.Add("A descrição é obrigatória.");
                 return false;
             }
-            else if (Descricao.Length < 3 || Descricao.Length > 300)
+            else if (Descricao.Length <= 3 || Descricao.Length >= 300)
             {
                 ErrosProdutos.Add("A descrição deve conter entre 3 e 300 caracteres.");
                 return false;
@@ -59,9 +59,9 @@ namespace CrudMercado.Model.Entities
         }
         private bool ValidarPreco()
         {
-            if (Preco < 5)
+            if (Preco < 0)
             {
-                ErrosProdutos.Add("O preço do produto deve ser maior ou igual a $ 5,00");
+                ErrosProdutos.Add("O preço do produto deve ser maior que R$0,00");
                 return false;
             }
             else

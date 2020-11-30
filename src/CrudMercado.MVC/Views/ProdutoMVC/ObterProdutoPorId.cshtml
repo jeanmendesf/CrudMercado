@@ -1,9 +1,9 @@
-﻿@model CrudMercado.Model.Entities.FornecedorEntity
+﻿@model CrudMercado.Model.Entities.ProdutoEntity
 <!DOCTYPE html>
 <html>
 <head>
     @{
-        ViewBag.Title = "Detalhes do fornecedor" + Html.DisplayNameFor(model => model.Nome);
+        ViewBag.Title = "Detalhes do Produto" + Html.DisplayNameFor(model => model.Nome);
     }
 </head>
 
@@ -18,10 +18,10 @@
                     @Html.DisplayNameFor(model => model.Nome)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Cpf)
+                    @Html.DisplayNameFor(model => model.Descricao)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Produtos)
+                    @Html.DisplayNameFor(model => model.Preco)
                 </th>
             </tr>
         </thead>
@@ -33,20 +33,20 @@
                 @Html.DisplayFor(model => model.Nome)
             </td>
             <td>
-                @Html.DisplayFor(model => model.Cpf)
+                @Html.DisplayFor(model => model.Descricao)
             </td>
             <td>
-                @Html.DisplayFor(model => model.Produtos)
+                @Html.DisplayFor(model => model.Preco)
             </td>
             <td>
-                @Html.ActionLink("Editar", "AtualizarFornecedor", new { id = Model.Id }, new { @class = "btn-atualizar" })
-                @Html.ActionLink("Deletar", "DeletarFornecedor", new { id = Model.Id }, new { @class = "btn-deletar" })
+                @Html.ActionLink("Editar", "AtualizarProduto", new { id = Model.Id }, new { @class = "btn-atualizar" })
+                @Html.ActionLink("Deletar", "DeletarProduto", new { id = Model.Id }, new { @class = "btn-deletar" })
             </td>
         </tr>
     </table>
 
     <div>
-        <a asp-action="ObterTodosFornecedores" class="btn-voltar">Voltar</a>
+        <a asp-action="ObterTodosProdutos" class="btn-voltar">Voltar</a>
     </div>
 </body>
 </html>

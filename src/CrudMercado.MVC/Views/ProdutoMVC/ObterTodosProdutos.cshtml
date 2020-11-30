@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CrudMercado.Model.Entities.ProdutoEntity>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+    <h2 class="titulo">Lista de Produtos</h2>
+    <p></p>
+    <div>
+        <table class="table" id="lista-fornecedores">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Preco)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "AtualizarProduto", new { id = item.Id }, new { @class = "btn-atualizar" })
+                        @Html.ActionLink("Deletar", "DeletarProduto", new { id = item.Id }, new { @class = "btn-deletar" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
