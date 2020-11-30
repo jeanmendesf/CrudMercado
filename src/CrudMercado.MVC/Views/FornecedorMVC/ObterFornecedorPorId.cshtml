@@ -1,49 +1,48 @@
 ﻿@model CrudMercado.Model.Entities.FornecedorEntity
+<!DOCTYPE html>
+<html>
+<head>
+    @{
+        ViewBag.Title = "Detalhes do fornecedor" + Html.DisplayNameFor(model => model.Nome);
+    }
+</head>
 
-@{
-    ViewBag.Title = "Detalhes do fornecedor" + Html.DisplayNameFor(model => model.Nome);
-}
-<br />
-<p>
-    @Html.ActionLink("Lista de fornecedores", "Obter", "Fornecedor")
-</p>
-<table class="table">
-    <thead>
+<body>
+    <table class="table" id="lista-fornecedores">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos)
+                </th>
+            </tr>
+        </thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Produtos)
-            </th>
-            <th></th>            
+            <td>
+                @Html.DisplayFor(model => model.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Produtos)
+            </td>
         </tr>
-    </thead>
-    <tr>
-        <td>
-            @Html.DisplayFor(model => model.Id)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.Cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(model => model.Produtos)
-        </td>
-    </tr>
+    </table>
 
-
-    <tr>
-        <td>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        </td>
-    </tr>
-</table>
+    <div>
+        <a asp-action="ObterTodosFornecedores" class="btn-voltar">Voltar</a>
+    </div>
+</body>
+</html>

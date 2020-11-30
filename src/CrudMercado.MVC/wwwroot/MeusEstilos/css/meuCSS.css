@@ -49,6 +49,7 @@ h2.titulo {
 
 #lista-fornecedores {
     box-shadow: 0 0 2px 2px #1e7b1e;
+    margin-bottom: 15px;
 }
 
     #lista-fornecedores thead {
@@ -106,7 +107,7 @@ h2.titulo {
 .btn-voltar {
     text-decoration: none;
     border: #4db8ff 3px solid;
-    color: #4db8ff;
+    color: #005c99;
     border-radius: 30px;
     padding: 9px;
     margin: 7px;
@@ -115,14 +116,69 @@ h2.titulo {
 
     .btn-voltar:hover {
         text-decoration: none;
+        color: #005c99;
         background-color: #b3e0ff;
-
     }
 
 
 
-/*----------Pagina Deletar Fornecedor----------*/
+/*----------Pagina Atualizar Fornecedor----------*/
 #formEditar {
-    box-shadow: 0 0 1px 1px #1e7b1e;
     padding: 15px;
+    box-shadow: 0 0 2px 2px #1e7b1e;
 }
+
+    #formEditar div {
+        padding: 6px;
+    }
+
+        #formEditar div label {
+            color: #1e7b1e;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+#botoes-atualizar {
+    margin-top: 15px;
+}
+
+    #botoes-atualizar .btn-atualizar {
+        background-color: transparent;
+        text-decoration: none;
+        border: 3px solid;
+        border-radius: 30px;
+        padding: 9px;
+        margin: 7px;
+        color: #1e7b1e;
+    }
+
+        #botoes-atualizar .btn-atualizar:hover {
+            background-color: #d6f5d6;
+        }
+
+
+
+/*----------Pagina Atualizar Fornecedor----------*/
+#formAdicionar {
+    padding: 15px;
+    box-shadow: 0 0 2px 2px #1e7b1e;
+}
+
+    #formAdicionar div {
+        padding: 6px;
+    }
+
+.btn-adicionar {
+    background-color: transparent;
+    text-decoration: none;
+    border: 3px solid;
+    border-radius: 30px;
+    padding: 9px;
+    margin: 7px;
+    color: #86b300;
+}
+
+    .btn-adicionar:hover {
+        text-decoration: none;
+        background-color: #dcffcc;
+    }
